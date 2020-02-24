@@ -1,0 +1,26 @@
+main {
+    height: 96vh;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: ">";
+}
+img {
+    width: 400px;
+}
+.page-title {
+    padding: 2em 0 2em 4em;
+    margin-top: -20px;
+    background-image: url("/images/ilya-trigubenko-79x4WTDSRtE-unsplash.jpg");
+    background-size: cover;
+}
+#homepage-center {
+    border: 3px solid teal;
+    border-radius: 5%;
+}
+.homepage-section {
+    border: 3px solid teal;
+    border-radius: 5%;
+}
