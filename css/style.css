@@ -1,20 +1,7 @@
-main {
+/* INDEX PAGE */
+
+main.index-container {
     height: 96vh;
-}
-.breadcrumb-item+.breadcrumb-item::before {
-    display: inline-block;
-    padding-right: .5rem;
-    color: #6c757d;
-    content: ">";
-}
-img {
-    width: 400px;
-}
-.page-title {
-    padding: 2em 0 2em 4em;
-    margin-top: -20px;
-    background-image: url("/images/ilya-trigubenko-79x4WTDSRtE-unsplash.jpg");
-    background-size: cover;
 }
 #homepage-center {
     border: 3px solid teal;
@@ -23,4 +10,44 @@ img {
 .homepage-section {
     border: 3px solid teal;
     border-radius: 5%;
+    position: relative;
+    display: flex;
+}
+.homepage-sect-link {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+a.homepage-sect-link:hover {
+    text-decoration: none;
+}
+
+/* NAVIGATION BLOCK (CROSS_SECTION) */
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: ">";
+}
+
+
+
+/* UNIFIED PAGE ELEMENTS (internal pages) */
+
+.page-title {
+    padding: 2em 0 2em 4em;
+    margin-top: -20px;
+    background-image: url("/images/ilya-trigubenko-79x4WTDSRtE-unsplash.jpg");
+    background-size: cover;
+}
+img {
+    max-width: 400px;
+    max-height: 225px;
+}
+footer {
+    background-color: white;
+    padding: 1em;
 }
