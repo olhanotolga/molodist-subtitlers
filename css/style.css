@@ -26,28 +26,33 @@ a.homepage-sect-link:hover {
 
 /* NAVIGATION BLOCK (CROSS_SECTION) */
 
+h2 {
+    margin-right: 1rem;
+}
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     padding-right: .5rem;
     color: #6c757d;
     content: ">";
 }
-
+#page-header {
+    /* padding: 2em 0 2em 4em;
+    margin-top: -20px; */
+    display: flex;
+    align-items: center;
+}
 
 
 /* UNIFIED PAGE ELEMENTS (internal pages) */
 
-.page-title {
-    padding: 2em 0 2em 4em;
-    margin-top: -20px;
-    background-image: url("/images/ilya-trigubenko-79x4WTDSRtE-unsplash.jpg");
-    background-size: cover;
-}
+
 img {
     max-width: 400px;
     max-height: 225px;
 }
 footer {
-    background-color: white;
+    background-color: #343a40;
     padding: 1em;
+    margin-top: 1em;
+    color: white;
 }
