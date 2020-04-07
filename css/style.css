@@ -3,13 +3,11 @@
 main.index-container {
     height: 96vh;
 }
-#homepage-center {
+#homepage-center, .homepage-section {
     border: 3px solid teal;
-    border-radius: 5%;
+    border-radius: 0.5em;
 }
 .homepage-section {
-    border: 3px solid teal;
-    border-radius: 5%;
     position: relative;
     display: flex;
 }
