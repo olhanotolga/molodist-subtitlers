@@ -1,6 +1,37 @@
 from flask import Flask, render_template, url_for
 from subtitlers_app import app
 
+navbar = [
+    {
+        'navtext' : 'Home',
+        'navlink' : '/index'
+    },
+    {
+        'navtext' : 'About',
+        'navlink' : '/about'
+    },
+    {
+        'navtext' : 'Subtitling',
+        'navlink' : '/subtitling'
+    },
+    {
+        'navtext' : 'Translating',
+        'navlink' : '/translating'
+    },
+    {
+        'navtext' : 'Editing',
+        'navlink' : '/editing'
+    },
+    {
+        'navtext' : 'Tools',
+        'navlink' : '/tools'
+    },
+    {
+        'navtext' : 'FAQ',
+        'navlink' : '/faq'
+    }
+]
+
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
@@ -8,15 +39,18 @@ def index():
     columnone = [
         {
             'heading' : 'About',
-            'paragraph' : 'About the portal and its structure overview'
+            'paragraph' : 'About the portal and its structure overview',
+            'link' : 'about'
         },
         {
             'heading' : 'Subtitling',
-            'paragraph' : 'How to create subtitles, file types, software'
+            'paragraph' : 'How to create subtitles, file types, software',
+            'link' : 'subtitling'
         },
         {
             'heading' : 'Translating',
-            'paragraph' : 'Film translation essentials, UA language resources'
+            'paragraph' : 'Film translation essentials, UA language resources',
+            'link' : 'translating'
         }
     ]
     h1 = 'Molodist subtitlers'
@@ -24,15 +58,18 @@ def index():
     columntwo = [
         {
             'heading' : 'Editing',
-            'paragraph' : 'Working with text files, editing, converting, etc.'
+            'paragraph' : 'Working with text files, editing, converting, etc.',
+            'link' : 'editing'
         },
         {
             'heading' : 'Tools',
-            'paragraph' : 'Links to useful tools (online and downloadable)'
+            'paragraph' : 'Links to useful tools (online and downloadable)',
+            'link' : 'tools'
         },
         {
             'heading' : 'FAQ',
-            'paragraph' : 'Questions & answers on film subtitling & translation'
+            'paragraph' : 'Questions & answers on film subtitling & translation',
+            'link' : 'faq'
         }
     ]
     return render_template('index.html', title='Home', columnone=columnone, columntwo=columntwo, h1=h1, description=description)
@@ -43,7 +80,7 @@ def about():
 
 @app.route('/subtitling')
 def subtitling():
-    return render_template('subtitling.html', title='Subtitling')
+    return render_template('subtitling.html', title='Subtitling', navbar=navbar)
 
 @app.route('/translating')
 def translating():
