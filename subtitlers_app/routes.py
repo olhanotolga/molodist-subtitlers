@@ -39,12 +39,12 @@ def index():
     columnone = [
         {
             'heading' : 'About',
-            'paragraph' : 'About the portal and its structure overview',
+            'paragraph' : "About the portal, its story, and sections' overview",
             'link' : 'about'
         },
         {
             'heading' : 'Subtitling',
-            'paragraph' : 'How to create subtitles, file types, software',
+            'paragraph' : 'How to create subtitles, file types, and structure',
             'link' : 'subtitling'
         },
         {
@@ -76,19 +76,67 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About')
+    sections = [
+        {
+            "title" : "About the project",
+            "article" : "article1"
+        },
+        {
+            "title" : "How to navigate",
+            "article" : "article2"
+        }
+    ]
+    return render_template('about.html', title='About', navbar=navbar, sections=sections)
 
 @app.route('/subtitling')
 def subtitling():
-    return render_template('subtitling.html', title='Subtitling', navbar=navbar)
+    sections = [
+        {
+            "title" : "Subtitles",
+            "article" : "article1"
+        },
+        {
+            "title" : "Timecodes vs. no timecodes",
+            "article" : "article2"
+        },
+        {
+            "title" : "Structure and rules",
+            "article" : "article3"
+        }
+    ]
+    return render_template('subtitling.html', title='Subtitling', navbar=navbar, sections=sections)
 
 @app.route('/translating')
 def translating():
-    return render_template('translating.html', title='Translating')
+    sections = [
+        {
+            "title" : "General guidelines",
+            "article" : "article1"
+        },
+        {
+            "title" : "Some language rules",
+            "article" : "article2"
+        },
+        {
+            "title" : "Proofreading and resources",
+            "article" : "article3"
+        }
+    ]
+    return render_template('translating.html', title='Translating', navbar=navbar, sections=sections)
 
 @app.route('/editing')
 def editing():
-    return render_template('editing.html', title='Editing')
+    sections = [
+        {
+            "title" : "Tips",
+            "article" : "article1"
+        },
+        {
+            "title" : "Checklist",
+            "article" : "article2"
+        }
+    ]
+    return render_template('editing.html', title='Editing', navbar=navbar, sections=sections)
 
 @app.route('/tools')
 def tools():
@@ -98,5 +146,7 @@ def tools():
 def faq():
     return render_template('faq.html', title='FAQ')
 
-
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html', title="404"), 404
 

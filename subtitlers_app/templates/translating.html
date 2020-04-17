@@ -1,124 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Molodist Subtitlers | Translating</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "partials/tabcontent.html" %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-</head>
-<body>
-	
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand flex-row" href="../index.html"><h1>Molodist subtitlers</h1></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav float-md-right">
-					<li class="nav-item text-right">
-						<a class="nav-link" href="about.html">About</a>
-					</li>
-					<li class="nav-item text-right">
-						<a class="nav-link" href="subtitling.html">Subtitling</a>
-					</li>
-					<li class="nav-item text-right active">
-						<a class="nav-link" href="translating.html">Translating</a>
-					</li>
-					<li class="nav-item text-right">
-						<a class="nav-link" href="files.html">Working with files</a>
-					</li>
-					<li class="nav-item text-right">
-						<a class="nav-link" href="tools.html">Tools</a>
-					</li>
-					<li class="nav-item text-right">
-						<a class="nav-link" href="faq.html">FAQ</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- BREADCRUMBS -->
-		<nav class="breadcrumb" aria-label="breadcrumb">
-			<a class="breadcrumb-item" href="../index.html">Home</a>
-		    <span class="breadcrumb-item active" aria-current="page">Translating</span>
-		</nav>
+{% block one %}
+	<h4>Що потрібно перекладати?</h4>
+	<p class="mr-3">Перекладати потрібно:</p>
+	<ul>
+		<li>назву фільму,</li>
+		<li>слова, що звучать у фільмі,</li>
+		<li>діалоги, в тому числі й іншомовні (іншою мовою, ніж та, з якої ви перекладаєте), особливо якщо вони є в діалогових лістах,</li>
+		<li>текст на екрані,</li>
+		<li>(часто) слова пісень</li>
+	</ul>
+	<p class="mr-3">Подекуди, особливо, якщо йдеться про скандинавські чи голландські фільми, англійські субтитри та діалогові лісти не повністю показують кількість тексту, який потрібно перекласти. Наприклад, вони можуть НЕ містити англомовні репліки або написи на екрані (включаючи саму назву фільму). Але перекладати такі фільми необхідно повністю, в тому числі на слух. Якщо ви не впевнені в своїх здібностях перекладати на слух — будь ласка, повідомте про це координаторів.</p>
+	<h4>Що НЕ потрібно перекладати?</h4>
+	<p class="mr-3">Перекладати не потрібно:</p>
+	<ul>
+		<li>імена акторів, авторів фільму, членів знімальної групи,</li>
+		<li>описи та коментарі щодо звуків у фільмі,</li>
+		<li>описи того, що відбувається на екрані</li>
+	</ul>
+	<h4>Назва фільму</h4>
+	<p class="mr-3">Назву фільму бажано перекладати з мови оригіналу, а не з англійської, незалежно від того, що працюємо ми зазвичай з англомовними субтитрами.</p>
+	<p class="mr-3">В будь-якому разі, перекладаючи назву фільму, перевірте, чи немає її, уже перекладеної, в програмі фестивалю чи на сайтах-довідниках типу IMDB чи вікіпедії.</p>
+	<h4>Обсяг та змістове наповнення українських субтитрів</h4>
+	<p class="mr-3">Український варіант кожної репліки не повинен суттєво перевищувати ориґінальний текст за кількістю знаків. Допускається зменшення тексту до 10-15% від тексту оригіналу. (Слід звернути увагу на те, що англійський переклад уже, як правило, є зменшеним.)</p>
+	<p class="mr-3">Текст не повинен бути насичений складними підрядними реченнями — так само, як і незрозумілими скороченнями.</p>
+{% endblock %}
 
 
-	</header>
-
-	<main>
-		<header class="page-title">
-		<h2>Translating</h2>
-		</header>
-
-		<article class="container col-10">
-			<nav role="navigation">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="tabtranslating1-tab" data-toggle="tab" href="#translating1" role="tab" aria-controls="translating1" aria-selected="true">Article 1</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="translating2-tab" data-toggle="tab" role="tab" aria-controls="translating2" aria-selected="false" href="#translating2">Article 2</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="translating3-tab" data-toggle="tab" role="tab" aria-controls="translating3" aria-selected="false" href="#translating3">Article 3</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="translating4-tab" data-toggle="tab" role="tab" aria-controls="translating4" aria-selected="false" href="#translating4">Article 4</a>
-					</li>
-				</ul>	
-			</nav>
-
-			<div class="tab-content" id="nav-tabContent">
-				<article class="tab-pane fade show active" role="tabpanel" aria-labelledby="translating1-tab" id="translating1">
-					<h3 class="text-info mt-4">Article 1</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="/mockups/mockup_normal_page.png">
-					</section>
-				</article>
-
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="translating2-tab" id="translating2">
-					<h3 class="text-info mt-4">Article 2</h3>
-					<section class="d-flex flex-column flex-md-row">
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-				</article>
-
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="translating3-tab" id="translating3">
-					<h3 class="text-info mt-4">Article 3</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-					
-				</article>
-
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="translating14-tab" id="translating4">
-					<h3 class="text-info mt-4">Article 4</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-					
-				</article>
-			</div>
-		</article>
-	</main>
-
-	<footer class="container fixed-bottom mb-3">&copy; created by Olha Halat</footer>
+{% block two %}
+	<h4>Правопис</h4>
+	<p class="mr-3">Користуємося чинною версією українського правопису. Оскільки перехід на версію 2019-го року має відбутися протягом декількох років, прохання уточнити у координатора/координаторки перекладачів, якій із версій надається перевага.</p>
+	<p class="mr-3">В будь-якому разі, головне — послідовність у користуванні тим чи іншим варіантом правопису.</p>
+	<h4>Написання власних назв</h4>
+	<p class="mr-3">Намагаємося залишати власні назви близькими за звучанням до оригіналу. Тому слід уважно слухати, як вимовляються імена та власні назви в самому фільмі.</p>
+	<p class="mr-3">Варто зберігати подвоєння приголосних (напр. Бред Пітт, а не Піт), за винятком, хіба що, деяких французьких імен (П'єр, а не П'єрр).</p>
+	<p class="mr-3">Літера J в більшості мов читається інакше, ніж ДЖ або Ж.</p>
+	<p class="mr-3">S в ряді мов і в певних позиціях вимовляється, як українська Ш, наприклад, в угорській, польській, голландській тощо.</p>
+	<p class="mr-3">W найчастіше передається як В: Вільям, вікенд, Бові (а не Уїльям, уїкенд, Боуї).</p>
+	<h4>Літери/звуки Г, Ґ і Х</h4>
+	<p class="mr-3">Розрізняємо Г, Ґ і Х. Якщо спрощено: h=г, g=ґ, ch=х, звісно, це стосується не всіх мов і не у всіх позиціях. Пам’ятайте, що G в голландській звучить, як українська Х.</p>
+	<p class="mr-3">Слово «ґей» (гомосексуал) завжди пишемо через Ґ.</p>
+	<h4>Назви міст у родовому відмінку</h4>
+	<p class="mr-3">Міста (чоловічий рід, друга відміна) в родовому відмінку закінчуються на -а: Нью-Йорка, Парижа, Києва… Якщо ж ви користуєтеся новим правописом (2019–2020) (і ваш переклад повністю відповідає його нормам), закінчення може бути й -у.</p>
+	<h4>Кличний відмінок</h4>
+	<p class="mr-3">Поширюється на імена з усіх відомих нам мов, крім односкладових азійських імен і прізвищ.</p>
+	<h4>Звертання на «Ви»</h4>
+	<p class="mr-3">В усіх випадках, звертання на «Ви» в титрах пишемо з МАЛЕНЬКОЇ літери.</p>
+	<p class="mr-3">Щодо того, коли герої повинні переходити з «Ви» на «ти» в англомовних фільмах — єдиного правила не існує. Тому потрібно виявляти свою перекладацьку інтуїцію, звертати увагу на загальну тональність діалогів тощо.</p>
+	<h4>Пан/пані/панна</h4>
+	<p class="mr-3">Перевагу слід віддавати українським формам звертання, але використання оригінальних не буде вважатися помилкою — головне, бути послідовним і не змішувати оригінальні з українськими в одному перекладі.</p>
+	<h4>Hey</h4>
+	<p class="mr-3">Слово hey не завжди перекладається «гей». Залежно від контексту його можна перекласти як «чуєш», «слухай», «привіт», «агов» тощо. Якщо воно стоїть перед іменем і вказує на звертання до когось, його можна взагалі не перекладати, бо в українській є для цього кличний відмінок.</p>
+	<h4>Бог/Господь</h4>
+	<p class="mr-3">Пишеться з великої літери, якщо в оригіналі теж із великої.</p>
+	<h4>Лайливі слова</h4>
+	<p class="mr-3">Тут усе залежить від контексту й внутрішнього чуття кожного перекладача. Часом fuck доцільніше перекласти, як «курва», «дідько», «трясця» і подібне, але часом слід використовувати грубіші відповідники без евфемізмів. Якщо слова «хуй», «блядь» і «їбать» (які, до речі, не є суто російськими) допомагають точніше адаптувати діалог під сприйняття українським глядачем, то варто їх використовувати.</p>
+	<h4>Фемінітиви</h4>
+	<p class="mr-3">Завжди використовуйте фемінітиви. Однак, коли йдеться про групу осіб різних статей, не слід використовувати скісну лінію (як-от тут: «студенти/-ки») — в таких випадках зупиняйтеся на одному роді слова (наприклад, «студенти»).</p>
+	<h4>Б/би, щоб/щоби</h4>
+	<p class="mr-3">Б пишеться після слів, що закінчуються на голосний звук, відповідно, би — після тих, що закінчуються на приголосний: «зробила б», «зробив би». Щоби вживається лише в розмовній формі української мови і при перекладах його варто уникати, хіба лише йдеться про не дуже грамотного персонажа.</p>
+	<h4>«Ставити питання»</h4>
+	<p class="mr-3">А не задавати. Також — «запитувати».</p>
+	<h4>Лапки</h4>
+	<p class="mr-3">Використовуємо такі лапки — " " — з тієї лише причини, що вони забирають менше місця, на відміну від французьких: «».</p>
+	<h4>Три крапки</h4>
+	<p class="mr-3">Часто трапляється, що в англійському тексті у випадку, якщо частина речення переноситься на наступний рядок, то стоять три крапки наприкінці першого рядка і на початку наступного, наприклад:</p>
+	<pre>Якщо підемо разом
+до найближчого бару...
+...ми обговоримо можливість
+вашої служби у мене.</pre>
+	<p class="mr-3">Будь ласка, НЕ вживайте три крапки в перекладі. Лише — в разі необхідности, там, де вони потрібні й позначають незакінчене речення або незакінчену думку.</p>
+	<h4>Цитати й розділові знаки</h4>
+	<p class="mr-3">На відміну від англійської мови, в українській крапка після цитати завжди ставиться ПІСЛЯ лапок (".....".).</p>
+{% endblock %}
 
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-
-</body>
-</html>
+{% block three %}
+	<h4>Перевірка правопису</h4>
+			
+	<p class="mr-3">Після закінчення роботи над перекладом і перед його надсиланням координатору або координаторці, необхідно відкрити файл із перекладом у Word, Google Docs чи подібній програмі, щоб перевірити правильність правопису й мінімізувати кількість механічних помилок.</p>
+	<p class="mr-3">Дуже бажано також перечитати свій переклад, в ідеалі — синхронно з фільмом, щоб зрозуміти, наскільки легко читатиметься текст глядачами під час перегляду.</p>
+	<h4>Редагування</h4>
+	<p class="mr-3">Редактори мають працювати з перекладами у Word чи Google Docs в режимі правки, аби координатор/-ка та перекладач могли побачити, які правки було внесено, та схвалити або відхилити їх.</p>
+	<h4>Ресурси та корисні посилання</h4>
+	<p class="mr-3">
+		<ul class="list-unstyled">
+			<li><a href="https://e2u.org.ua/">Англійсько-українські словники</a></li>
+			<li><a href="http://sum.in.ua/">Словник української мови в 11 томах</a></li>
+			<li><a href="https://dyskurs.net/ukrainskyi-pravopys-2019-roku/">Правопис 2019 року</a></li>
+			<li><a href="http://lcorp.ulif.org.ua/dictua/">«Словники України» онлайн</a></li>
+			<li><a href="https://ukrainian.stackexchange.com/">Ukrainian Stack Exchange</a> (форум із запитаннями й відповідями)</li>
+		</ul>
+	</p>
+{% endblock %}

@@ -1,65 +1,108 @@
-{% extends "layout.html" %}
-	
-	{% include 'partials/header.html' %}
+{% extends "partials/tabcontent.html" %}
 
-	{% block content %}
-	<main>
+{% block one %}
+	<p class="mr-3">Під час показів фільмів субтитри або «вшиті» у фільми, або ж їх проектують на екран та перемикають вручну.</p>
+	<p class="mr-3">У першому випадку йдеться про .srt-файли, текстові файли з проставленими таймкодами у певному форматі.</p>
+	<p class="mr-3">У другому випадку йдеться про звичайні текстові .txt-файли без таймкодів. Їх зазвичай перемикає («проклацує») перекладач/перекладачка, адже він/вона найбільше знайомі з перекладом фільму.</p>
+	<p class="mr-3">Тобто, при отриманні фільму на переклад, уточніть, чи перемикатимуться вони вручну, чи автоматично.</p>
+{% endblock %}
 
-		<article class="container col-10">
-			<nav role="navigation">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="tabsubtitlers1-tab" data-toggle="tab" href="#subtitlers1" role="tab" aria-controls="subtitlers1" aria-selected="true">Article 1</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="subtitlers2-tab" data-toggle="tab" role="tab" aria-controls="subtitlers2" aria-selected="false" href="#subtitlers2">Article 2</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="subtitlers3-tab" data-toggle="tab" role="tab" aria-controls="subtitlers3" aria-selected="false" href="#subtitlers3">Article 3</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="subtitlers4-tab" data-toggle="tab" role="tab" aria-controls="subtitlers4" aria-selected="false" href="#subtitlers4">Article 4</a>
-					</li>
-				</ul>	
-			</nav>
+{% block two %}
+	<p class="mr-3">Якщо ви одержуєте в роботу файл субтитрів мовою оригіналу/англійською із готовими таймкодами, необхідно працювати з ним в одній із субтитрувальних програм, аби в процесі роботи ненароком не зіпсувати таймкод.</p>
+	<h4>Заголовок</h4>
+	<p class="mr-3">Якщо ви готуєте субтитри для автоматичного перемикання в залі, то можете користуватися будь-яким текстовим редактором.</p>
+	<p class="mr-3">Про програми для роботи з субтитрами — у розділі «Інструментарій».</p>
+	<h4>Субтитри з таймкодами,  .srt</h4>
+	<p class="mr-3">Найпоширеніший формат файлів субтитрів з таймкодами — .srt. Всередині він виглядає наступним чином (приклад з Вікіпедії):</p>
+	<pre>73
+03:03:51:17 --&gt; 03:03:53:17
+– Вона вказала на тебе.
+– Це не я, босе.</pre>
+	<p class="mr-3">Тобто:</p>
+	<pre>[порядковий номер субтитра]
+[таймкод початку субтитра] [символ --&gt;] [таймкод кінця субтитра]
+[текст субтитра,]
+[іноді — дворядковий]
+[порожній рядок]</pre>
+	<p class="mr-3">Список форматів субтитрів ви можете переглянути, наприклад,  тут:
+		<a href="https://en.wikipedia.org/wiki/Subtitles#Subtitle_formats">Субтитри: формати (англ.)</a>
+	</p>
+	<h4>Субтитри без таймкодів</h4>
+	<p class="mr-3">Звичайні текстові субтитри без таймкодів виглядають ось так:</p>
+	<pre>- Хто там?|- Ні, перше ти назватися повинен.
+Нехай живе король?
+- Бернардо?|- Він.</pre>
+	<h4>Тобто:</h4>
+	<p class="mr-3"></p>
+	<ol>									
+		<li>Кожен субтитр має власний рядок.</li>
+		<li>Порожніх рядків між субтитрами немає.</li>
+		<li>Якщо субтитр дворядковий, він записується в один рядок, а його два рядки розділяються вертикальною рискою, без пробілів.</li>
+	</ol>
+	<pre>[перший субтитр, дворядковий]
+[{верхній рядок}{риска, без пропусків}{нижній рядок}]
+- Хто там?|- Ні, перше ти назватися повинен.
+[другий субтитр, однорядковий]
+Нехай живе король? [між субтитрами немає пропусків]
+[третій субтитр, знову дворядковий]
+- Бернардо?|- Він.</pre>
+	<p class="mr-3">На екрані це виглядатиме так:</p>
+	<pre>[1]
+- Хто там?
+- Ні, перше ти назватися повинен.
 
-			<div class="tab-content" id="nav-tabContent">
-				<article class="tab-pane fade show active" role="tabpanel" aria-labelledby="subtitlers1-tab" id="subtitlers1">
-					<h3 class="text-info mt-4">Article 1</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="/mockups/mockup_normal_page.png">
-					</section>
-				</article>
+[2]
+Нехай живе король?
 
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="subtitlers2-tab" id="subtitlers2">
-					<h3 class="text-info mt-4">Article 2</h3>
-					<section class="d-flex flex-column flex-md-row">
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster. This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-				</article>
+[3]
+- Бернардо?
+- Він.</pre>
 
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="subtitlers3-tab" id="subtitlers3">
-					<h3 class="text-info mt-4">Article 3</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-					
-				</article>
+{% endblock %}
 
-				<article class="tab-pane fade" role="tabpanel" aria-labelledby="subtitlers4-tab" id="subtitlers4">
-					<h3 class="text-info mt-4">Article 4</h3>
-					<section class="d-flex flex-column flex-md-row">
-						<p class="mr-3">This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-						<img src="">
-					</section>
-					
-				</article>
-			</div>
-		</article>
-	</main>
+{% block three %}
+	<h4>Назви файлів</h4>
+	<p class="mr-3">Коли ви готуєте файл із субтитрами, називайте його, будь ласка, латинкою і без пробілів. Наприклад: GroundBeneathMyFeet_UKR.srt або zemlia-pid-mojimy-nogamy_UKR.srt</p>
+	<p class="mr-3">Можна на власний розсуд використовувати дефіси, нижні риски чи «верблюжий регістр» (між словами немає пробілів, натомість кожне нове слово починається з великої літери).</p>
+	<h4>Назва фільму і титри</h4>
+	<p class="mr-3">Назва фільму завжди пишеться ВЕЛИКИМИ ЛІТЕРАМИ без лапок. Титри (імена членів знімальної групи) перекладати не потрібно.</p>
+	<h4>Розмір субтитра</h4>
+	<p class="mr-3">Один субтитр може бути одно- або дворядковим. Не більше.</p>
+	<p class="mr-3">Загалом же, довжина одного рядка не повинна перевищувати 35-40 знаків.</p>
+	<p class="mr-3">Якщо йдеться про дворядковий титр із сукупною кількістю знаків, наприклад, 70, то намагаємося рівномірно розподіляти кількість знаків між верхнім і нижнім рядком.</p>
+	<h4>Діалоги</h4>
+	<p class="mr-3">Якщо подвійний субтитр показує діалог між двома персонажами, записуємо це в такій формі:</p>
+	<pre>- Слухняна дівчинка?
+- Та ні. Колись я пробувала екстазі.</pre>
+	<p class="mr-3">Тобто:</p>
+	<pre>[дефіс] [пропуск] [репліка]
+[новий рядок] [дефіс] [пропуск] [репліка]</pre>
+	<h4>Тире в дворядкових субтитрах</h4>
+	<p class="mr-3">НІКОЛИ не ставиться на початку другого рядка. Лише в кінці першого.</p>
+	<p class="mr-3">Неправильно:</p>
+	<pre>Коли ти зі своєю "коханкою"
+– ненавиджу це слово –</pre>
+	<p class="mr-3">Правильно:</p>
+	<pre>Коли ти зі своєю "коханкою" –
+ненавиджу це слово –</pre>
+	<h4>Тире, дефіс і довге тире</h4>
+	<p class="mr-3">Слід розрізняти дефіс (-), тире (–) і довге тире (—). Дефіс використовуємо на початку прямої мови та всередині слів, де це передбачено правописом.</p>
+	<p class="mr-3">Тире використовуємо лише всередині реплік:</p>
+	<pre>Бо "зараз" – це саме тоді,
+коли ти щось робиш.</pre>
+	<p class="mr-3">Довге тире в субтитрах НІКОЛИ не використовуємо.</p>
+	<h4>Розділові знаки</h4>
+	<p class="mr-3">Пам'ятаємо, що розділові знаки в англійській використовуються не так, як в українській.</p>
+	<p class="mr-3">Наприклад:</p>
+	<pre>Hopefully you won't be mad--
+(у деяких випадках {~} замість {--})</pre>
+	<p class="mr-3">Два дефіси поспіль в українському варіанті передаються трьома крапками, бо позначають обірвану думку:</p>
+	<pre>Сподіваюся, ти не розсердишся...</pre>
+	<p class="mr-3">(також зверніть увагу, англійською hopefully не відділяється комою від решти речення, в той час, як в українській після "сподіваюся" стоїть кома.)</p>
+	<h4>Спеціальні символи при уточненнях чи поясненнях</h4>
+	<p class="mr-3">Не потрібні.</p>
+	<p class="mr-3">Маються на увазі символи на зразок * чи &lt;&gt; тощо. Наприклад, коли називається місце дії або надається додаткова закадрова інформація.</p>
+	<p class="mr-3">Такі титри ви або записуєте звичайним текстом («Берлін, 1989 рік»), або ігноруєте (наприклад, такі: «співає італійською»).</p>
+			
+{% endblock %}
 
-	{% endblock %}

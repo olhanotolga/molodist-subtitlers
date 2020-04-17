@@ -1,64 +1,84 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Molodist Subtitlers | Working with Files</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "partials/tabcontent.html" %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% block one %}
 
-</head>
-<body>
+	<h4>Під час перекладу…</h4>
+
+	<p class="mr-3">Вимкніть автозаміну.</p>
+
+	<p class="mr-3">І взагалі, краще не користуйтеся текстовими процесорами (Word, Google Docs, Pages). Раджу користуватися простими текстовими редакторами (plain text editors), бажано — тими, що «для програмістів».</p>
+
+	<p class="mr-3">Їхня перевага — не лише в мінімалістичному дизайні, який не відволікає. Вони ідеально підходять для роботи з текстовими файлами (а не документами), бо не форматують ваш текст. Крім того, в них набагато простіше дивитися кількість символів у субтитрі або загальну кількість рядків (корисно при підрахунку кількості субтитрів).</p>
+
+	<h4>Перед тим, як надсилати файл...</h4>
+
+	<p class="mr-3">Перегляньте свій переклад. Це значно полегшить роботу редакторам чи тому, хто перевірятиме текст після вас. Також — зменшить імовірність провалу під час показу :)</p>
+
+	<p class="mr-3">Використовуйте опцію «Знайти і замінити», яка дозволить вам швидко виявити, окрім слів-паразитів, наприклад, також довгі тире, французькі лапки або подвійні пробіли.</p>
+
+	<p class="mr-3">При перевірці можете скористатися текстовим процесором із вбудованою перевіркою орфографії (MS Word, Google Docs тощо) або спеціальними плаґінами, які покажуть вам особливо явні помилки й одруківки. Редагувати файли все ж рекомендую в текстовому редакторі (plain text editor).</p>
+
+	<p class="mr-3">Якщо ваші субтитри з таймкодами, проклікайте їх синхронно з фільмом перед тим, як надсилати, щоб перевірити, чи правильно вони відображаються в часі.</p>
+
+	<h4>Після того, як надіслали файл…</h4>
+
+	<p class="mr-3">Не видаляйте його в себе. Він ще може вам знадобитися.</p>
+
+{% endblock %}
+
+
+{% block two %}
+
+	<p class="mr-3">Нижче — список того, на що слід особливо звернути увагу. Можете відмітити перевірене галочками прямо тут (головне — не перезавантажувати сторінку, щоб не зникли галочки) :)</p>
+
+	<h4>Чекліст</h4>
+
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-one" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-one">Ваш переклад з таймкодами, якщо субтитри «вшиватимуться» у фільм, і без таймкодів, якщо субтитри «проклацуватимуться» під час сеансу.</label><br>
+	</div>
 	
-	<header>
-		<h1>Molodist subtitlers</h1>
-		<nav>
-			<a href="#">Home</a>
-			<a href="#">Subtitling</a>
-			<a href="#">Translating</a>
-			<a href="#">Working with files</a>
-			<a href="#">Tools</a>
-			<a href="#">FAQ</a>
-		</nav>
-		<!-- BREADCRUMBS -->
-	</header>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-one" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-one">Серед субтитрів є назва фільму, яку записано великими літерами.</label><br>
+	</div>
 
-	<main>
-		<header>
-		<h2>Subtitling</h2>
-		</header>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-two" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-two">У вас немає зайвих порожніх рядків.</label><br>
+	</div>
 
-		<article>
-			<h3>Article 1</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-three" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-three">Таймкоди проставлено правильно. Кожен субтитр закінчується пізніше в часі, ніж починається, а наступні субтитри відображаються на екрані після попередніх.</label><br>
+	</div>
 
-		<article>
-			<h3>Article 2</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-four" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-four">Нумерація субтитрів збігається з кількістю субтитрів.</label><br>
+	</div>
 
-		<article>
-			<h3>Article 3</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-five" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-five">У вас не залишилося неперекладених написів на екрані (іноді вони ховаються до або після титрів).</label><br>
+	</div>
 
-		<article>
-			<h3>Article 4</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
-		
-	</main>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-six" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-six">Слова, що НЕ ввійшли до діалогових лістів, також перекладено.</label><br>
+	</div>
 
-	<footer>&copy; created by Olha Halat</footer>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-seven" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-seven">У вас немає рядків, довших за 42 символи.</label><br>
+	</div>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-eight" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-eight">Правильні розділові знаки поставлено у правильних місцях.</label><br>
+	</div>
 
-</body>
-</html>
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-nine" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-nine">У вашому тексті немає одруківок, за які буде соромно під час показу.</label><br>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-twn" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-twn">Назва файлу відповідає назві фільму.</label><br>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" id="checklist-eleven" type="checkbox" name="editing-checklist"><label class="form-check-label" for="checklist-eleven">Назву файлу записано латинкою.</label><br>
+	</div>
+
+{% endblock %}

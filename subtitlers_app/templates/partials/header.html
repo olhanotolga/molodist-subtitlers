@@ -1,6 +1,11 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand flex-row" href="{{ url_for('index') }}"><h1>Molodist subtitlers</h1></a>
+        <a class="navbar-brand flex-row" href="{{ url_for('index') }}">
+            <i class="fas fa-film d-none d-sm-inline h1 mr-3" aria-hidden="true"></i>
+            <i class="fas fa-film h2 d-sm-none mr-3" aria-hidden="true"></i>
+            <h1 class="d-none d-sm-inline">Molodist subtitlers</h1>
+            <h1 class="d-inline h2 d-sm-none">{{ title }}</h1>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav float-md-right">
                 {% for item in navbar %}
-                <li class="nav-item text-right">
+                <li class="nav-item text-right text-uppercase">
                     <a class="nav-link {% if item.navtext == title %}active{% endif %}" href="{{ item.navlink }}">{{ item.navtext }}</a>
                 </li>
                 {% endfor %}
@@ -16,10 +21,12 @@
         </div>
     </nav>
     
-    <nav id="page-header" class="breadcrumb" aria-label="breadcrumb">
+    
+    <nav id="page-header" class="breadcrumb d-none d-sm-flex" aria-label="breadcrumb">
         <h2>{{ title }}</h2>
         <a class="breadcrumb-item" href="{{ url_for('index') }}">Home</a>
         <span class="breadcrumb-item active" aria-current="page">{{ title }}</span>
     </nav>
+    
 
 </header>
