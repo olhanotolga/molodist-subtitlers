@@ -10,7 +10,7 @@ I’ve been meaning to put this project together since 2018. An occasional trans
 The project is not finished. I plan on maintaining it and updating with new information.
 I’m also planning to build a few tools to automate certain proofreading and editing tasks. For example, a program that would check if the manually added timecodes are in a proper order.
 The stack I used
-Since I joined FrauenLoop Web Development program, I’ve been putting to practice the skills that I’ve acquired over January–April 2020: HTML, CSS, Bootstrap, Python, Flask, and, of course, Git and GitHub.
+Since I joined *FrauenLoop Web Development program*, I’ve been putting to practice the skills that I’ve acquired over January–April 2020: HTML, CSS, Bootstrap, Python, Flask, and, of course, Git and GitHub.
 
 **The server part:** Python, Flask, Jinja.
 
