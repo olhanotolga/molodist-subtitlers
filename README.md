@@ -6,7 +6,7 @@ This is a repository.
 The application is to be deployed...
 
 ### About the project
-I’ve been meaning to put this project together since 2018. An occasional translator for the Molodist International Film Festival (https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
+I’ve been meaning to put this project together since 2018. An occasional translator for the [Molodist International Film Festival](https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
 
 The project is not finished. I plan on maintaining it and updating with new information.
 I’m also planning to build a few tools to automate certain proofreading and editing tasks. For example, a program that would check if the manually added timecodes are in a proper order.
