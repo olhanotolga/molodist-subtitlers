@@ -39,40 +39,41 @@ def index():
     columnone = [
         {
             'heading' : 'About',
-            'paragraph' : "About the portal, its story, and sections' overview",
+            'paragraph' : "About the portal, the story behind it, and overview of its main sections.",
             'link' : 'about'
         },
         {
             'heading' : 'Subtitling',
-            'paragraph' : 'How to create subtitles, file types, and structure',
+            'paragraph' : 'Subtitle files with and without timecodes, their structure and insides.',
             'link' : 'subtitling'
         },
         {
             'heading' : 'Translating',
-            'paragraph' : 'Film translation essentials, UA language resources',
+            'paragraph' : 'Film translation essentials, known language issues, and useful resources.',
             'link' : 'translating'
         }
     ]
     h1 = 'Molodist subtitlers'
-    description = 'This is an info portal for everyone who translates and subtitles for the Molodist film festival.'
+    description = 'This is an info portal for everyone who translates and subtitles movies for the Molodist film festival.'
     columntwo = [
         {
             'heading' : 'Editing',
-            'paragraph' : 'Working with text files, editing, converting, etc.',
+            'paragraph' : 'Minimizing the number of errors and typos and the editing checklist.',
             'link' : 'editing'
         },
         {
             'heading' : 'Tools',
-            'paragraph' : 'Links to useful tools (online and downloadable)',
+            'paragraph' : 'A typical subtitler’s toolset and links to selective tools (offline and online).',
             'link' : 'tools'
         },
         {
             'heading' : 'FAQ',
-            'paragraph' : 'Questions & answers on film subtitling & translation',
+            'paragraph' : 'Main questions and answers on film subtitling, translation, and editing.',
             'link' : 'faq'
         }
     ]
-    return render_template('index.html', title='Home', columnone=columnone, columntwo=columntwo, h1=h1, description=description)
+    background = "bg-dark"
+    return render_template('index.html', title='Home', columnone=columnone, columntwo=columntwo, h1=h1, description=description, background=background)
 
 @app.route('/about')
 def about():
@@ -96,11 +97,11 @@ def subtitling():
             "article" : "article1"
         },
         {
-            "title" : "Timecodes vs. no timecodes",
+            "title" : "(No) timecodes",
             "article" : "article2"
         },
         {
-            "title" : "Structure and rules",
+            "title" : "Structure",
             "article" : "article3"
         }
     ]
@@ -110,15 +111,15 @@ def subtitling():
 def translating():
     sections = [
         {
-            "title" : "General guidelines",
+            "title" : "General",
             "article" : "article1"
         },
         {
-            "title" : "Some language rules",
+            "title" : "Language rules",
             "article" : "article2"
         },
         {
-            "title" : "Proofreading and resources",
+            "title" : "Proofreading",
             "article" : "article3"
         }
     ]
@@ -140,13 +141,36 @@ def editing():
 
 @app.route('/tools')
 def tools():
-    return render_template('tools.html', title='Tools')
+    sections = [
+        {
+            "title" : "Text editors",
+            "article" : "article1"
+        },
+        {
+            "title" : "Spell checkers",
+            "article" : "article2"
+        },
+        {
+            "title" : "Subtitling software",
+            "article" : "article3"
+        },
+        {
+            "title" : "File/text conversion",
+            "article" : "article4"
+        },
+        {
+            "title" : "Custom tools",
+            "article" : "article5"
+        }
+    ]
+    return render_template('tools.html', title='Tools', navbar=navbar, sections=sections)
 
 @app.route('/faq')
 def faq():
-    return render_template('faq.html', title='FAQ')
+    return render_template('faq.html', title='FAQ', navbar=navbar)
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html', title="404"), 404
+    background = "bg-dark"
+    return render_template('page_not_found.html', title="404", navbar=navbar, background=background), 404
 

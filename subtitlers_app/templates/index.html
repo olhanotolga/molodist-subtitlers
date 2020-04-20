@@ -2,32 +2,31 @@
 
 {% block content %}
 	
-	<main class="container-fluid align-items-center index-container"> <!-- NOT FORGET TO REMOVE -->
+	<main class="container-fluid align-items-center index-container" id="page-container"> <!-- NOT FORGET TO REMOVE -->
 		<nav class="row h-100 justify-content-center" id="index-navigation">
 
-			<div class="col-11 col-md-4 p-4 d-flex flex-column text-center justify-content-center">
+			<div class="col-11 col-md-4 col-lg-3 p-4 d-flex flex-column text-center justify-content-center">
 				{% for div in columnone %}
-				<div class="h-25 my-3 homepage-section">
-					<a class="stretched-link homepage-sect-link" href="{{ div.link }}">
-						<h2>{{ div.heading }}</h2>
+				<div class="min-h-25 my-3 p-2 pt-3 homepage-section align-items-center">
+					<a class="stretched-link homepage-sect-link text-dark" href="{{ div.link }}">
+						<h2 class="bg-info text-light py-1">{{ div.heading }}</h2>
 						<p>{{ div.paragraph }}</p>
 					</a>
 				</div>
 				{% endfor %}
-				
 			</div> <!-- end of the first column -->
 
-			<div class="col-11 col-md-4 p-4 text-center align-self-center" id="homepage-center">
+			<div class="col-11 col-md-4 p-4 pt-5 text-center align-self-center d-flex flex-column justify-content-center" id="homepage-center">
 				<i class="fas fa-film h1"></i>
 				<h1>{{ h1 }}</h1>
 				<p class="lead">{{ description }}</p>
 			</div> <!-- end of the second column -->
 
-			<div class="col-11 col-md-4 p-4 d-flex flex-column text-center justify-content-center">
+			<div class="col-11 col-md-4 col-lg-3 p-4 d-flex flex-column text-center justify-content-center">
 				{% for div in columntwo %}
-				<div class="h-25 my-3 homepage-section">
-					<a class="stretched-link homepage-sect-link" href="{{ div.link }}">
-						<h2>{{ div.heading }}</h2>
+				<div class="min-h-25 my-3 p-2 pt-3 homepage-section align-items-center">
+					<a class="stretched-link homepage-sect-link text-dark" href="{{ div.link }}">
+						<h2 class="bg-info text-light py-1">{{ div.heading }}</h2>
 						<p>{{ div.paragraph }}</p>
 					</a>
 				</div>

@@ -1,69 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Molodist Subtitlers | FAQ</title>
+{% extends "layout.html" %}
 
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block content %}
+{% include 'partials/header.html' %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<main class="container col-11 col-lg-10 align-self-center mt-4" id="page-container">
 
-</head>
-<body>
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Дедлайни</h3>
+		<p class="mr-3">Строгих дедлайнів немає, але варто пам’ятати, що фільмів багато, а часу на переклад — ніколи не вистачає.</p>
+		<p class="mr-3">За умовчанням, робота над перекладом одного повнометражного фільму повинна тривати не більше 4-5 днів, залежно від кількости тексту. Якщо вам знадобиться більше часу, краще попередити про це завчасно координаторів перекладу.</p>
+	</section>
 	
-	<header>
-		<h1>Molodist subtitlers</h1>
-		<nav>
-			<a href="#">Home</a>
-			<a href="#">Subtitling</a>
-			<a href="#">Translating</a>
-			<a href="#">Working with files</a>
-			<a href="#">Tools</a>
-			<a href="#">FAQ</a>
-		</nav>
-		<!-- BREADCRUMBS -->
-	</header>
-
-	<main>
-		<header>
-		<h2>FAQ</h2>
-		</header>
-
-
-<!-- BOOTSTRAP SCROLLSPY COMPONENT will be cool here -->
-		<article>
-			<section>
-				<h3>Question 1</h3>
-				<img src="">
-				<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-			</section>
-
-			<section>
-				<h3>Question 2</h3>
-				<img src="">
-				<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-			</section>
-
-			<section>
-				<h3>Question 3</h3>
-				<img src="">
-				<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-			</section>
-
-			<section>
-				<h3>Question 4</h3>
-				<img src="">
-				<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-			</section>
-		</article>
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Скільки часу потрібно на переклад одного фільму?</h3>
+		<p class="mr-3">З власного досвіду: на переклад 10 хвилин фільму витрачається в середньому година часу. Часто — більше. Все залежить від таймкодів та кількості тексту. Наприклад, документальні фільми-інтерв’ю перекладаються дуже повільно.</p>
+		<p class="mr-3">Також зважайте на те, що вам знадобиться година чи дві на перевірку своєї роботи.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Якими програмами мені користуватися?</h3>
+		<p class="mr-3">Дивіться розділ <a href="{{ url_for('tools') }}">Інструментарій</a>. Там більш детально про це написано.</p>
+		<p class="mr-3">Для перекладу (субтитри без таймкодів) — прості текстові редактори. НЕ текстові процесори.</p>
+		<p class="mr-3">Для роботи з субтитрами, що містять таймкоди — спеціальні програми на кшталт Aegisub та Subtitle Edit.</p>
+		<p class="mr-3">Для перевірки тексту — текстові процесори із плаґінами для перевірки правопису, також спеціальні додатки типу OnlineCorrector.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Що таке «субтитри під клацання»?</h3>
+		<p class="mr-3">Це субтитри без таймкодів у простому текстовому форматі (.txt), де одному рядку відповідає один субтитр. Їх потрібно відкривати у спеціальній програмі та проєктувати на екран. Під час показу фільму їх вручну перемикає «клацає» перекладач/перекладачка.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Я не встигаю. Що робити?</h3>
+		<p class="mr-3">Якщо в процесі роботи ви раптом усвідомлюєте, що не встигаєте закінчити переклад вчасно, обов'язково повідомляйте про це.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Який варіант правопису мені використовувати?</h3>
+		<p class="mr-3">Актуальний. Хоча повний перехід на правопис 2019 року офіційно триватиме кілька років, його вже можна і варто використовувати. Головне – робити це послідовно.</p>
+	</section>
 		
-	</main>
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Як має виглядати документ із субтитрами?</h3>
+		<p class="mr-3">Детальніше про це — у розділі <a href="{{ url_for('subtitling') }}">Субтитрування</a>.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Як працювати з таймкодами?</h3>
+		<p class="mr-3">Слід відкрити файл із субтитрами (якщо його немає — створити) у спеціальній програмі на кшталт Subtitle Edit чи Aegisub, разом із самим фільмом. Такі програми дозволяють автоматично виставляти початок і кінець кожного субтитра з точністю до мілісекунд.</p>
+		<p class="mr-3">Якщо ж потрібно проставляти субтитри на слух (бо оригінальні відсутні), дуже допомагає візуально орієнтуватися за звуковою доріжкою.</p>
+	</section>
+	
+	<section class="question py-3 border-bottom border-warning">
+		<h3>Як перевірити, чи послідовно записані таймкоди?</h3>
+		<p class="mr-3">Щоб перевірити послідовність субтитрів, збережіть свій файл, а потім відкрийте його у програмі роботи з субтитрами разом із фільмом і проклікайте субтитри. Якщо побачите, що деякі з них накладаються на інші — маєте проблему.</p>
+		<p class="mr-3">Інструмент, за допомогою якого це можна було б перевірити це автоматично, у мене в планах.</p>
+	</section>
+	
 
-	<footer>&copy; created by Olha Halat</footer>
+	<section class="question py-3">
+		<h3>Як мені швидко переробити .srt-субтитри на субтитри «під клацання»?</h3>
+		<p class="mr-3">Для цього є ось ця невеличка програмка: <a href="https://tabsandspaces.github.io/srt-killer/" target="_blank">SRT-Killer</a>. Просто скопіюйте і вставте вміст .srt-файла у поле ліворуч і натисніть Process.</p>
+		<p class="mr-3">Скріншот:</p>
+		<div class="col-12 col-lg-8 mb-2">
+			<img class="border border-secondary img-fluid" src="{{ url_for('static', filename='images/srt-killer-in-action.png') }}" alt="Screenshot of SRT-Killer tool in action">
+		</div>
+	</section>
+	
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</main>
 
-</body>
-</html>
+
+{% endblock content %}

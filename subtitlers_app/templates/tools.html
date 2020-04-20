@@ -1,64 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Molodist Subtitlers | Tools and Resources</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "partials/tabcontent.html" %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-</head>
-<body>
+{% block one %}
+	<p class="mr-3">Для перекладу субтитрів «під клацання» слід використовувати не текстовий процесор, а простий текстовий редактор, — наприклад, <a href="https://atom.io/" target="_blank">Atom</a>, <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> чи <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>.</p>
+	<h4>Переваги</h4>
+	<ul>
+		<li>Вони дозволяють створювати текстові файли (.txt або .srt) без зайвого форматування (наприклад, не інтерпретують дефіс із пробілом як елемент списку і не зроблять з трьох крапок один символ).</li>
+		<li>При виділенні фрагмента тексту ви одразу бачите кількість символів.</li>
+		<li>Ви можете налаштувати редактор так, щоб символи, які виходять за межі допустимої кількості, автоматично переносилися на новий рядок (див. скріншот нижче).</li>
+		<li>Рядки одразу пронумеровані (зручно, коли треба порахувати кількість субтитрів).</li>
+		<li>Простий дизайн і мінімальний функціонал не відволікають від роботи :)</li>
+		<li>Якщо порівнювати з Google Docs — ваш комп не гальмуватиме за великих обсягів тексту :)</li>
+	</ul>
+	<h4>Скріншоти (Atom)</h4>
+	<div class="screenshots row align-items-start">
+		<div class="col-12 col-lg-7 mb-3">
+			<p class="mr-3">За допомогою preferred line length і soft wrap можна налаштувати бажану довжину рядків (у символах) у програмі-редакторі:</p>
+			<img class="border border-secondary img-fluid" src="{{ url_for('static', filename='images/atom-soft-wrap-settings.png') }}" alt="Screenshot of Atom text editor: soft wrap in settings">
+		</div>
+		<div class="col-12 col-lg-5 mb-2">
+			<p class="mr-3">Ось як це виглядатиме у робочому вікні:</p>
+			<img class="border border-secondary img-fluid" src="{{ url_for('static', filename='images/atom-soft-wrap-view.png') }}" alt="Screenshot of Atom text editor: soft wrap in view">
+		</div>
+	</div>
 	
-	<header>
-		<h1>Molodist subtitlers</h1>
-		<nav>
-			<a href="#">Home</a>
-			<a href="#">Subtitling</a>
-			<a href="#">Translating</a>
-			<a href="#">Working with files</a>
-			<a href="#">Tools</a>
-			<a href="#">FAQ</a>
-		</nav>
-		<!-- BREADCRUMBS -->
-	</header>
+{% endblock %}
 
-	<main>
-		<header>
-		<h2>Subtitling</h2>
-		</header>
 
-		<article>
-			<h3>Article 1</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
+{% block two %}
+	<p class="mr-3">Для перевірки ортографії можна відкрити свій файл з перекладом у текстовому процесорі (Word, Google Docs, Pages тощо) і скористатися його вбудованими інструментами. Бажано не виправляти і не зберігати файл у цих програмах, щоб не «зіпсувати ідеальну відсутність форматування».</p>
+	<p class="mr-3">Також корисний додаток для перевірки тексту на помилки — <a href="https://onlinecorrector.com.ua/uk/" target="_blank">OnlineCorrector</a>.</p>
+{% endblock %}
 
-		<article>
-			<h3>Article 2</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
 
-		<article>
-			<h3>Article 3</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
+{% block three %}
+	<p class="mr-3">Якщо ви одержуєте в роботу файл англійських субтитрів із готовими таймкодами, необхідно працювати в одній із субтитрувальних програм, наприклад, <a href="https://www.nikse.dk/SubtitleEdit" target="_blank">Subtitle Edit</a> чи <a href="http://subworkshop.sourceforge.net/index.php" target="_blank">Subtitle Workshop</a> (для Windows) або <a href="http://www.aegisub.org/" target="_blank">Aegisub</a> (для macOS). Це потрібно для того, щоб у процесі роботи ненароком не зіпсувати таймкод.</p>
+	<p class="mr-3">При роботі над такими файлами в звичайному блокноті чи іншому текстовому редакторі, таймкоди дуже часто ламаються. Виявлення і виправлення помилок займає багато часу (в той час, коли його зазвичай немає).</p>
+	<p class="mr-3">Субтитри «проклацуються» в програмі subtitler 9 (Windows).</p>
+{% endblock %}
 
-		<article>
-			<h3>Article 4</h3>
-			<img src="">
-			<p>This portal is created to help the new and existing Molodist film translators accomplish our noble mission easier and faster.</p>
-		</article>
-		
-	</main>
 
-	<footer>&copy; created by Olha Halat</footer>
+{% block four %}
+	<p class="mr-3">Іноді ви отримуєте для перекладу субтитри в іншому форматі. Іноді це — діалогові лісти в PDF, або ж узагалі таблиці.</p>
+	<h4>Таблиці</h4>
+	<p class="mr-3">З таблицями зазвичай просто — потрібно скопіювати текст, вставити його у свій текстовий редактор і замінити табуляцію на пробіли. Табуляцію можна виявити за допомогою regular expressions — їй відповідає символ \t. Дивіться скріншот нижче.</p>
+	<div class="screenshots row align-items-start">
+		<div class="col-12 col-lg-6 mb-3">
+			<p class="mr-3">Колишні клітинки таблиці розділені за допомогою табуляції (Ctrl/Cmd + F для пошуку, зірочкою (*) уможливлюєте regular expressions, вводите \t у полі пошуку):</p>
+			<img class="border border-secondary img-fluid" src="{{ url_for('static', filename='images/copying-from-table-atom.png') }}" alt="Screenshot: copying from table to Atom text editor">
+		</div>
+		<div class="col-12 col-lg-6 mb-2">
+			<p class="mr-3">Тепер замінити табуляцію пробілами дуже просто — в полі заміни введіть символи \n і натисніть Replace all:</p>
+			<img class="border border-secondary img-fluid" src="{{ url_for('static', filename='images/atom-copying-from-table-tabs-to-spaces.png') }}" alt="Screenshot: replacing tabs with spaces in Atom text editor">
+		</div>
+	</div>
+	<h4>Конвертація</h4>
+	<p class="mr-3">Програми для роботи з субтитрами відкривають і конвертують більшість форматів субтитрів без проблем. Також пам’ятайте, що будь-який текстовий файл ви можете відкрити у своєму текстовому редакторі (саме редакторі, а не процесорі). Якщо файл бінарний (не текстовий), подивіться, яка програма може його відкрити. В крайньому разі — запитайте у координаторів перекладу або скористайтеся програмами-конвертерами файлів (за запитом [X] to [Y] file converter).</p>
+	<h4>SRT <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> TXT</h4>
+	<p class="mr-3">Якщо вам потрібно швидко перетворити субтитри з таймкодами на субтитри «під клацання» (прибрати таймкоди і поставити вертикальну риску у дворядкових субтитрах), ось вам <a href="https://tabsandspaces.github.io/srt-killer/" target="_blank">SRT Killer</a>.</p>
+{% endblock %}
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>
-</html>
+{% block five %}
+	<h4>У розробці…</h4>
+	<p class="mr-3">Інструменти, що дозволяють:</p>
+	<ul>
+		<li>Перевірити, чи трапляються 3-рядкові субтитри</li>
+		<li>Замінити подвійні пробіли одинарними</li>
+		<li>Перевірити послідовність таймкодів</li>
+	</ul>
+{% endblock %}

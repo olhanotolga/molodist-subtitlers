@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
-	
-	{% include 'partials/header.html' %}
 
     {% block content %}
+    {% include 'partials/header.html' %}
 
-    <main class="container text-center">
-        <h3>* 404 * 404 * 404 *</h3>
-        <p>This page does not exist. Please use navigation to get where you need.</p>
+    <main class="d-flex flex-column justify-content-center container text-center text-light" id="page-container">
+        <h3 class="display-1 my-3">404</h3>
+        <p class="display-3 text-break text-uppercase"><span class="text-warning">Сторінку</span> не знайдено...</p>
+        <p class="h1 text-uppercase"><a class="text-info" href="{{ url_for('index') }}">Додому</a></p>
     </main>
     
 
