@@ -2,7 +2,7 @@
 ## A knowledge base for Ukrainian film translators and subtitlers.
 
 This is a repository.
-The application is to be deployed...
+The application is live at https://olhanotolga.pythonanywhere.com/.
 
 ### About the project
 I’ve been meaning to put this project together since 2018. An occasional translator for the [Molodist International Film Festival](https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
@@ -16,9 +16,11 @@ Since I joined *FrauenLoop Web Development program*, I’ve been putting to prac
 
 **The client part:** HTML, Bootstrap for layout and styling, CSS for custom styling.
 
+**Deployment:** [PythonAnywhere](https://www.pythonanywhere.com/).
+
 ### Project overview
 
-#### Structure
+#### Pages/Endpoints
 
 The website consists of the following sections:
 1. Home
@@ -29,7 +31,9 @@ The website consists of the following sections:
 6. Tools
 7. FAQ
 
-- It also has an Error page.
+- It also has an Error page
+
+The sections correspond to a respective endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other endpoint which is not associated with its own template returns the Error page.
 
 #### Language
 
