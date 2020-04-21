@@ -33,7 +33,7 @@ The website consists of the following sections:
 
 - It also has an Error page
 
-The sections correspond to a respective endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other endpoint which is not associated with its own template returns the Error page.
+Each section corresponds to an endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other endpoint which is not associated with its own template returns the Error page.
 
 #### Language
 
