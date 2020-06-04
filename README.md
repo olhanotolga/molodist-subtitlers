@@ -5,6 +5,7 @@ This is a repository.
 The application is live at https://olhanotolga.pythonanywhere.com/.
 
 ### About the project
+
 I’ve been meaning to put this project together since 2018. As an occasional translator for the [Molodist International Film Festival](https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
 
 The project is not finished. I plan on maintaining it and updating with new information.
@@ -49,4 +50,3 @@ For the demo purposes, some screenshots here are provided with the English conte
 #### Responsiveness
 
 The website is fully responsive, which has been achieved with Bootstrap, some CSS Flexbox, and media queries.
-
