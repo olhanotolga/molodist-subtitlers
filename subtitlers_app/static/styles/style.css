@@ -33,16 +33,16 @@ body {
 }
 #page-container {
     min-height: 70vh;
-    margin-bottom: 3.5em;
+    margin-bottom: 5em;
 }
 .tab-pane h3 {
     display: inline-block;
     color: #343a40;
     border-bottom: 3px solid #ffc107;
     text-transform: uppercase;
+    margin-bottom: 1em;
 }
 h4 {
-    margin-top: 1.3em;
     margin-bottom: 0.9em;
     font-size: 1.3em;
 }
@@ -79,6 +79,9 @@ section > ol, section > ul {
     justify-content: space-around;
     margin: 0 auto;
 }
+.homepage-sect-link h2 {
+    word-wrap: break-word;
+}
 a.homepage-sect-link:hover {
     text-decoration: none;
 }
@@ -104,6 +107,9 @@ pre {
     .homepage-sect-link>p {
         font-size: 1rem;
     }
+    .homepage-sect-link h2 {
+        font-size: 1.3rem;
+    }
 }
 
 /* NAVIGATION BLOCK (CROSS_SECTION) */
@@ -119,6 +125,12 @@ pre {
     border-radius: 0%;
     display: flex;
     align-items: center;
+}
+
+/* EDITING */
+
+#checklist {
+    margin-bottom: 1em;
 }
 
 /* FAQ */

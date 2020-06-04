@@ -3,27 +3,27 @@ from subtitlers_app import app
 
 navbar = [
     {
-        'navtext' : 'Home',
+        'navtext' : 'Головна',
         'navlink' : '/index'
     },
     {
-        'navtext' : 'About',
+        'navtext' : 'Про проєкт',
         'navlink' : '/about'
     },
     {
-        'navtext' : 'Subtitling',
+        'navtext' : 'Субтитрування',
         'navlink' : '/subtitling'
     },
     {
-        'navtext' : 'Translating',
+        'navtext' : 'Переклад',
         'navlink' : '/translating'
     },
     {
-        'navtext' : 'Editing',
+        'navtext' : 'Редагування',
         'navlink' : '/editing'
     },
     {
-        'navtext' : 'Tools',
+        'navtext' : 'Інструментарій',
         'navlink' : '/tools'
     },
     {
@@ -38,132 +38,132 @@ navbar = [
 def index():
     columnone = [
         {
-            'heading' : 'About',
-            'paragraph' : "About the portal, the story behind it, and overview of its main sections.",
+            'heading' : 'Про проєкт',
+            'paragraph' : "Про проєкт: передісторія сайту та огляд його основних розділів.",
             'link' : 'about'
         },
         {
-            'heading' : 'Subtitling',
-            'paragraph' : 'Subtitle files with and without timecodes, their structure and insides.',
+            'heading' : 'Субтитрування',
+            'paragraph' : 'Субтитри з таймкодами і «під клацання», їхня структура тощо.',
             'link' : 'subtitling'
         },
         {
-            'heading' : 'Translating',
-            'paragraph' : 'Film translation essentials, known language issues, and useful resources.',
+            'heading' : 'Переклад',
+            'paragraph' : 'Загальні рекомендації щодо перекладу, правопис та корисні посилання.',
             'link' : 'translating'
         }
     ]
     h1 = 'Molodist subtitlers'
-    description = 'This is an info portal for everyone who translates and subtitles movies for the Molodist film festival.'
+    description = 'Інфомайданчик для перекладачів і субтитрувальників кінофестивалю «Молодість».'
     columntwo = [
         {
-            'heading' : 'Editing',
-            'paragraph' : 'Minimizing the number of errors and typos and the editing checklist.',
+            'heading' : 'Редагування',
+            'paragraph' : 'Поради щодо зведення кількості помилок і одруківок до мінімуму.',
             'link' : 'editing'
         },
         {
-            'heading' : 'Tools',
-            'paragraph' : 'A typical subtitler’s toolset and links to selective tools (offline and online).',
+            'heading' : 'Інструментарій',
+            'paragraph' : 'Арсенал перекладачів-субтитрувальників та додаткові ресурси.',
             'link' : 'tools'
         },
         {
             'heading' : 'FAQ',
-            'paragraph' : 'Main questions and answers on film subtitling, translation, and editing.',
+            'paragraph' : 'Запитання та відповіді щодо перекладу, субтитрування та редагування.',
             'link' : 'faq'
         }
     ]
     background = "bg-dark"
-    return render_template('index.html', title='Home', columnone=columnone, columntwo=columntwo, h1=h1, description=description, background=background)
+    return render_template('index.html', title='Головна', columnone=columnone, columntwo=columntwo, h1=h1, description=description, background=background)
 
 @app.route('/about')
 def about():
     sections = [
         {
-            "title" : "About the project",
+            "title" : "Про проєкт",
             "article" : "article1"
         },
         {
-            "title" : "How to navigate",
+            "title" : "Розділи",
             "article" : "article2"
         }
     ]
-    return render_template('about.html', title='About', navbar=navbar, sections=sections)
+    return render_template('about.html', title='Про проєкт', navbar=navbar, sections=sections)
 
 @app.route('/subtitling')
 def subtitling():
     sections = [
         {
-            "title" : "Subtitles",
+            "title" : "Cубтитри",
             "article" : "article1"
         },
         {
-            "title" : "(No) timecodes",
+            "title" : "Таймкоди: з та без",
             "article" : "article2"
         },
         {
-            "title" : "Structure",
+            "title" : "Структура",
             "article" : "article3"
         }
     ]
-    return render_template('subtitling.html', title='Subtitling', navbar=navbar, sections=sections)
+    return render_template('subtitling.html', title='Субтитрування', navbar=navbar, sections=sections)
 
 @app.route('/translating')
 def translating():
     sections = [
         {
-            "title" : "General",
+            "title" : "Загальне",
             "article" : "article1"
         },
         {
-            "title" : "Language rules",
+            "title" : "Правопис",
             "article" : "article2"
         },
         {
-            "title" : "Proofreading",
+            "title" : "Перевірка тексту",
             "article" : "article3"
         }
     ]
-    return render_template('translating.html', title='Translating', navbar=navbar, sections=sections)
+    return render_template('translating.html', title='Переклад', navbar=navbar, sections=sections)
 
 @app.route('/editing')
 def editing():
     sections = [
         {
-            "title" : "Tips",
+            "title" : "Поради",
             "article" : "article1"
         },
         {
-            "title" : "Checklist",
+            "title" : "Чекліст",
             "article" : "article2"
         }
     ]
-    return render_template('editing.html', title='Editing', navbar=navbar, sections=sections)
+    return render_template('editing.html', title='Редагування', navbar=navbar, sections=sections)
 
 @app.route('/tools')
 def tools():
     sections = [
         {
-            "title" : "Text editors",
+            "title" : "Текстові редактори",
             "article" : "article1"
         },
         {
-            "title" : "Spell checkers",
+            "title" : "Перевірка правопису",
             "article" : "article2"
         },
         {
-            "title" : "Subtitling software",
+            "title" : "Для субтитрування",
             "article" : "article3"
         },
         {
-            "title" : "File/text conversion",
+            "title" : "Конвертація",
             "article" : "article4"
         },
         {
-            "title" : "Custom tools",
+            "title" : "Ще інструменти",
             "article" : "article5"
         }
     ]
-    return render_template('tools.html', title='Tools', navbar=navbar, sections=sections)
+    return render_template('tools.html', title='Інструментарій', navbar=navbar, sections=sections)
 
 @app.route('/faq')
 def faq():
