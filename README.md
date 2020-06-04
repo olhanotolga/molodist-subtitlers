@@ -43,7 +43,7 @@ The website consists of the following sections:
 
 ![error/404 page: screenshot](/subtitlers_app/static/images/subtitlers_error.png)
 
-Each section corresponds to an endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other endpoint which is not associated with its own template returns the Error page.
+Each section corresponds to an endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other (non-existing) endpoint returns the Error page.
 
 #### Language
 
