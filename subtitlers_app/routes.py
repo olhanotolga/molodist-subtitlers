@@ -7,7 +7,7 @@ navbar = [
         'navlink' : '/index'
     },
     {
-        'navtext' : 'Про проєкт',
+        'navtext' : 'Проєкт',
         'navlink' : '/about'
     },
     {
