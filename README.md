@@ -6,6 +6,8 @@ The application is live at https://olhanotolga.pythonanywhere.com/.
 
 ### About the project
 
+![homepage: screenshot](/subtitlers_app/static/images/subtitlers_homepage.png)
+
 I’ve been meaning to put this project together since 2018. As an occasional translator for the [Molodist International Film Festival](https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
 
 The project is not finished. I plan on maintaining it and updating with new information.
@@ -24,7 +26,7 @@ Since I joined *FrauenLoop Web Development program*, I’ve been putting to prac
 
 ### Project overview
 
-![homepage screenshot](/subtitlers_app/static/images/subtitlers_homepage.png)
+![subtitling: screenshot](/subtitlers_app/static/images/subtitlers_subtitling.png)
 
 #### Pages/Endpoints
 
@@ -37,7 +39,9 @@ The website consists of the following sections:
 6. Tools
 7. FAQ
 
-- It also has an Error page
+- It also has an Error page:
+
+![error/404 page: screenshot](/subtitlers_app/static/images/subtitlers_error.png)
 
 Each section corresponds to an endpoint (e.g. the About page is available at /about or the FAQ page is available at /faq etc.). Any other endpoint which is not associated with its own template returns the Error page.
 
