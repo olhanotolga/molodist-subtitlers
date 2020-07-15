@@ -159,7 +159,7 @@ def tools():
             "article" : "article4"
         },
         {
-            "title" : "Ще інструменти",
+            "title" : "Перевірка субтитрів",
             "article" : "article5"
         }
     ]
