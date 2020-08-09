@@ -103,6 +103,10 @@ def subtitling():
         {
             "title" : "Структура",
             "article" : "article3"
+        },
+        {
+            "title" : "Форматування",
+            "article" : "article4"
         }
     ]
     return render_template('subtitling.html', title='Субтитрування', navbar=navbar, sections=sections)
