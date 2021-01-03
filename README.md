@@ -10,9 +10,7 @@ The application is live at https://olhanotolga.pythonanywhere.com/.
 
 I’ve been meaning to put this project together since 2018. As an occasional translator for the [Molodist International Film Festival](https://molodist.com/en/) myself, I know how many questions arise once you start subtitling films! This is why I’ve tried to cover the basic information, examples, tools, and FAQs in this knowledge base.
 
-The project is not finished. I plan on maintaining it and updating with new information.
-
-I’m also planning to build a few tools to automate certain proofreading and editing tasks. For example, a program that would check if the manually added timecodes are in a proper order.
+I also built a few tools to automate certain tasks, such as conversion between subtitle formats or proofreading the subtitle files. I have linked to the toolset within the app. To view it separately, please see [Subtitlers Tools (live)](https://olhanotolga.github.io/subtitle-tools/) or [Subtitlers Tools (repo)](https://github.com/olhanotolga/subtitle-tools).
 
 ### The stack I used
 
